@@ -15,7 +15,7 @@ Install my-project with npm
 
 To run this project
 ```bash
-  npm install
+  npm run dev
 ```
 
 
