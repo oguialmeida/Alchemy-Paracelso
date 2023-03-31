@@ -1,7 +1,7 @@
 
 # Alchemy Paracelso
 
-This repository is the interface of Project Paracelso, which is a chemical reaction balancer mobile application.
+This repository is the interface of Project Paracelso, which is a chemical reaction balancer web and mobile application.
 
 ## Installation
 
