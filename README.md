@@ -1,21 +1,37 @@
 
 # Alchemy Paracelso
 
-This repository is the interface of Project Paracelso, which is a chemical reaction balancer web and mobile application.
+This repository is a chemical reaction balancer web and mobile application, calles "Projeto Paracelso".
 
-## Installation
+## Installation (Front-End)
 
-Install my-project with npm
+Install the project with npm
 
 ```bash
   npm install
 ```
     
-## Deployment
+## How to run (Front-End)
 
 To run this project
 ```bash
   npm run dev
+```
+
+## Installation (Back-End)
+
+Install the project with pip
+
+```bash
+  pip install flask
+  pip install sympy
+```
+    
+## How to run (Back-End)
+
+To run this project
+```bash
+  python main.py
 ```
 
 
