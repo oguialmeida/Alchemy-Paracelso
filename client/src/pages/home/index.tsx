@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "./styles";
 import { fakeData } from "../../data";
 
 import styles from '../../../styles/Home.module.css';
 
 const HomePage = () => {
+
+  const [busca, setBusca] = useState('');
+  console.log(busca)
+
+  // const dadosFiltrados = fakeData.filter(
+  //   (fakeData) => fakeData.startsWith(busca)
+  // );
+
   return (
-    <body>
+    <div>
       <div className={styles.header}>
-        <input type="search" placeholder="Pesquisar" className={styles.input} />
+        <input 
+          type="search" 
+          placeholder="Pesquisar" 
+          className={styles.input} 
+          value={busca}
+          onChange={(ev) => setBusca(ev.target.value)}
+        />
       </div>
+
       <h1 className={styles.titulo}>Usuários</h1>
-      <p className={styles.pagina}>Paracelso > Usuarios</p>
+      <p className={styles.pagina}>Paracelso > Usuários</p>
+
       <div className={styles.container}>
         <ul>
           {fakeData.map((person) => (
@@ -62,7 +78,7 @@ const HomePage = () => {
           ))}
         </ul>
       </Container> */}
-    </body>
+    </div>
   );
 };
 
