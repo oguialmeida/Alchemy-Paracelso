@@ -25,6 +25,8 @@ Install the project with pip
 ```bash
   pip install flask
   pip install sympy
+  pip install scikit-learn
+  pip install sqlite3
 ```
     
 ## How to run (Back-End)
