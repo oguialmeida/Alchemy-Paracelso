@@ -25,6 +25,8 @@ Install the project with pip
 ```bash
   pip install flask
   pip install sympy
+  pip install scikit-learn
+  pip install sqlite3
 ```
     
 ## How to run (Back-End)
@@ -38,7 +40,6 @@ To run this project
 ## Authors
 
 - [Guilherme Gomes](https://www.github.com/oguialmeida)
-- [João Paulo]()
 - [Júlia Botelho](https://github.com/jjuhbotelho)
 - [Pedro Wilson](https://github.com/pedrowrl)
 - [Matheus Saito](https://www.github.com/WarWolfOne)
