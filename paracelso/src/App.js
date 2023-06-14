@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Icon1 from './assets/Icon1.png';
 import Icon2 from './assets/Icon2.png';
 import Icon3 from './assets/Icon3.png';
@@ -12,7 +11,7 @@ import Team3 from "./assets/Julia.jpeg";
 import Team4 from "./assets/Pedro.jpg";
 import Team5 from "./assets/Marcos.jpeg";
 import Avatar from "./assets/Avatar.png";
-import './App.css';
+import './global-styles/App.css';
 import NavBar from './components/NavBar';
 import SectionTitle from './components/SectionTitle';
 import Footer from './components/Footer';

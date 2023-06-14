@@ -1,4 +1,4 @@
-import Styles from "./SectionTitle.module.css";
+import Styles from "./styles/SectionTitle.module.css";
 
 function SectionTitle({color1, color2}){
     return(
