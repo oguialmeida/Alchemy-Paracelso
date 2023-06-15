@@ -1,17 +1,15 @@
 import sqlite3
 from sklearn.svm import LinearSVC
 
-conn = sqlite3.connect('data.db')
-
-conn.execute('''CREATE TABLE IF NOT EXISTS data
+class Data:
+    def __init__(self):
+        self.conn = sqlite3.connect('database.db')
+        
+        self.conn.execute('''CREATE TABLE IF NOT EXISTS database
                 (id INTEGER PRIMARY KEY AUTOINCREMENT,
                  tipo TEXT,
                  elementos TEXT,
                  formula TEXT)''')
-
-class Data:
-    def __init__(self):
-        self.conn = sqlite3.connect('data.db')
     
     def get_data(self):
         cursor = self.conn.execute("SELECT * FROM data")
