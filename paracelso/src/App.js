@@ -15,10 +15,29 @@ import './global-styles/App.css';
 import NavBar from './components/NavBar';
 import SectionTitle from './components/SectionTitle';
 import Footer from './components/Footer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 function App() {
 
-  const [equacoes, setEquacoes] = useState(null);
+  const [equacoesIniciais, setEquacoesIniciais] = useState([])
+  const [equacoes, setEquacoes] = useState([])
+
+  useEffect(() => {
+    const fetchEquations = async () => {
+      try {
+        const response = await fetch(
+          'url'
+        );
+        const data = await response.json();
+        console.log(data);
+        setEquacoesIniciais(data);
+        setEquacoes(data);
+      }catch (error) {
+        console.log(error);
+      }
+    }
+    fetchEquations();
+  }, []);
+
   return (
     <div className="App">
       <NavBar />
@@ -36,6 +55,9 @@ function App() {
           >
             Buscar
           </button>
+        </div>
+        <div>
+          <ul></ul>
         </div>
       </section>
 
