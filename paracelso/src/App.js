@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <NavBar />
       <section className='Banner'>
-        <text className='Title'>Verifique o balanceamento das sua reações químicas</text>
+        <text className='Title'>Verifique o balanceamento das suas equações químicas</text>
         <div className='Search'>
           <input
             className='Input'
@@ -45,6 +45,7 @@ function App() {
           color2="como eles podem te ajudar"
         />
         <div className='Row'>
+          {/* A proxima div é visivel somente em dispositivos WEB. */}
           <div className='ItemList'>
             <div className='Column'>
               <div className='Row'>
@@ -98,13 +99,68 @@ function App() {
             </div>
           </div>
 
-          <div className='ItemList'>
+          {/* A proxima div é visivel somento em dispositivos moveis. */}
+          <div className='ItemListMobile'>
+            <div className='Column'>
+              <div className='Row'>
+                <img
+                  src={Icon1}
+                  className='Icon'
+                />
+                <div className='TextBox'>
+                  <text className='ItemTitle'>
+                    Lorem Ipsum
+                  </text>
+                  <text className='ItemText'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus vehicula varius nulla eget iaculis. Mauris luctus velit in libero faucibus,
+                    et vehicula turpis iaculis.
+                  </text>
+                </div>
+              </div>
+              <div className='Row'>
+                <img
+                  src={Icon2}
+                  className='Icon'
+                />
+                <div className='TextBox'>
+                  <text className='ItemTitle'>
+                    Lorem Ipsum
+                  </text>
+                  <text className='ItemText'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus vehicula varius nulla eget iaculis. Mauris luctus velit in libero faucibus,
+                    et vehicula turpis iaculis.
+                  </text>
+                </div>
+              </div>
+              <div className='Row'>
+                <img
+                  src={Icon3}
+                  className='Icon'
+                />
+                <div className='TextBox'>
+                  <text className='ItemTitle'>
+                    Lorem Ipsum
+                  </text>
+                  <text className='ItemText'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus vehicula varius nulla eget iaculis. Mauris luctus velit in libero faucibus,
+                    et vehicula turpis iaculis.
+                  </text>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
             <img
               src={Plant}
+              className='Plant'
             />
           </div>
 
-          <div className='ItemList'>
+          <div>
             <div className='Column'>
               <div className='Row'>
                 <img

@@ -23,15 +23,25 @@
     justify-content: center;
 }
 
-.Link{
+.Title {
     margin-top: 10px;
     font-family: Inter;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.Link {
+    margin-top: 10px;
+    font-family: Inter;
+    font-size: 16px;
     text-decoration: none;
     cursor: pointer;
     color: #FFFFFF;
 }
 
-.Center{
+.Center {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
@@ -40,7 +50,36 @@
     border-top: solid 1px #FFFFFF;
 }
 
-.Direitos{
+.Direitos {
     color: #FFFFFF;
     font-family: Inter;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .Row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Column {
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Link{
+        margin: 10px;
+    }
+
+    .Title {
+        margin: 10px;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 }

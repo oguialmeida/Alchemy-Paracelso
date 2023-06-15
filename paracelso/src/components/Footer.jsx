@@ -12,22 +12,22 @@ function Footer() {
                     />
                 </div>
                 <div className={Styles.Column}>
-                    <text>Navegue</text>
+                    <text className={Styles.Title}>Navegue</text>
                     <a
                         className={Styles.Link}
-                        href=""
+                        href="#"
                     >
                         Home
                     </a>
                     <a
                         className={Styles.Link}
-                        href=""
+                        href="#Services"
                     >
                         Serviços
                     </a>
                     <a
                         className={Styles.Link}
-                        href=""
+                        href="#Team"
                     >
                         Nosso Time
                     </a>
