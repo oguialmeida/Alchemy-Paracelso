@@ -82,4 +82,12 @@
         text-decoration: none;
         color: #FFFFFF;
     }
+
+    .Logo{
+        width: 180px;
+    }
+
+    .Direitos{
+        font-size: 10px;
+    }
 }
