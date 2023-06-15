@@ -20,7 +20,8 @@
   font-size: 36px;
   font-weight: 600;
   color: #FFFFFF;
-  margin: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -175,8 +176,8 @@ section {
   }
 
   .Icon {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     margin: 20px;
     margin-top: 40px;
   }
@@ -188,13 +189,15 @@ section {
   }
 
   .ProfilePicture {
-    width: 180px;
-    height: 180px;
-    border-radius: 90px;
+    width: 280px;
+    height: 280px;
+    border-radius: 160px;
   }
 
   .Plant{
-    width: 220px;
+    width: 320px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .Input{
@@ -204,5 +207,9 @@ section {
   .Button{
     width: auto;
     padding: 10px;
+  }
+
+  .Banner{
+    display: flex;
   }
 }

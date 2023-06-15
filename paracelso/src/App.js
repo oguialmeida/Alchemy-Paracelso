@@ -31,7 +31,7 @@ function App() {
         console.log(data);
         setEquacoesIniciais(data);
         setEquacoes(data);
-      }catch (error) {
+      } catch (error) {
         console.log(error);
       }
     }
