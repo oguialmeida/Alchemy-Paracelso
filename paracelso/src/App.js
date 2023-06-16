@@ -16,49 +16,56 @@ import NavBar from './components/NavBar';
 import SectionTitle from './components/SectionTitle';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
+import Axios from "axios";
+
 function App() {
 
-  const [equacoesIniciais, setEquacoesIniciais] = useState([])
-  const [equacoes, setEquacoes] = useState([])
+const url = "http://127.0.0.1:5000/balance"
+  const [data, setData] = useState({
+    equacoes: "",
+  })
 
-  useEffect(() => {
-    const fetchEquations = async () => {
-      try {
-        const response = await fetch(
-          'url'
-        );
-        const data = await response.json();
-        console.log(data);
-        setEquacoesIniciais(data);
-        setEquacoes(data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchEquations();
-  }, []);
+  function handle(e) {
+    const newData = { ...data }
+    newData[e.target.id] = e.target.value
+    setData(newData)
+    console.log(newData)
+  }
+
+  function submit(e){
+    e.preventDefault();
+    Axios.post(url, {
+      equation: data.equacoes
+    })
+    .then(res => {
+      console.log(res.data)
+    })
+  }
+
 
   return (
     <div className="App">
       <NavBar />
       <section className='Banner'>
         <text className='Title'>Verifique o balanceamento das suas equações químicas</text>
-        <div className='Search'>
+
+        <form>
           <input
             className='Input'
             type='text'
-            value={equacoes}
             placeholder='Digite as equações...'
+            onChange={(e) => handle(e)}
+            id="equacoes"
+            value={data.equacoes}
           />
           <button
             className='Button'
+            onClick={(e) => submit(e)}
           >
             Buscar
           </button>
-        </div>
-        <div>
-          <ul></ul>
-        </div>
+        </form>
+
       </section>
 
       <section id='Services'>
