@@ -16,32 +16,29 @@ import NavBar from './components/NavBar';
 import SectionTitle from './components/SectionTitle';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
-import Axios from "axios";
 
 function App() {
 
-const url = "http://127.0.0.1:5000/balance"
-  const [data, setData] = useState({
-    equacoes: "",
-  })
+  const [equation, setEquation] = useState(null);
 
-  function handle(e) {
-    const newData = { ...data }
-    newData[e.target.id] = e.target.value
-    setData(newData)
-    console.log(newData)
+  async function Post() {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/balance', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          equation: equation
+        }),
+      });
+      const result = await response.json();
+      console.log("Success:", result);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
-
-  function submit(e){
-    e.preventDefault();
-    Axios.post(url, {
-      equation: data.equacoes
-    })
-    .then(res => {
-      console.log(res.data)
-    })
-  }
-
 
   return (
     <div className="App">
@@ -54,13 +51,13 @@ const url = "http://127.0.0.1:5000/balance"
             className='Input'
             type='text'
             placeholder='Digite as equações...'
-            onChange={(e) => handle(e)}
+            onChange={() => setEquation(equation)}
             id="equacoes"
-            value={data.equacoes}
+            value={equation}
           />
           <button
             className='Button'
-            onClick={(e) => submit(e)}
+            onClick={() => Post()}
           >
             Buscar
           </button>
