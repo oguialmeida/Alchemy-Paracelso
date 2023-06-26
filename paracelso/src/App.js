@@ -20,6 +20,7 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [equation, setEquation] = useState(null);
+  const [buscaFake, setBuscaFake] = useState(false);
 
   async function Post() {
     try {
@@ -46,7 +47,7 @@ function App() {
       <section className='Banner'>
         <text className='Title'>Verifique o balanceamento das suas equações químicas</text>
 
-        <form>
+        <div className='Search'>
           <input
             className='Input'
             type='text'
@@ -57,12 +58,18 @@ function App() {
           />
           <button
             className='Button'
-            onClick={() => Post()}
+            onClick={(buscaFake) => setBuscaFake(true)}
           >
             Buscar
           </button>
-        </form>
+        </div>
 
+        {(buscaFake == true) ? (
+          <div className='Title'>
+            <text>2H2 + 0O2 -> 0H2O</text>
+          </div>
+        ) : <></>
+        }
       </section>
 
       <section id='Services'>
